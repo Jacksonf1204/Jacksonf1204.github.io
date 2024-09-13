@@ -87,19 +87,11 @@ body {
 
 /* Content area */
 .main-content {
-    margin-left: 250px; /* Account for the sidebar */
+    flex-grow: 1;
     padding: 20px;
-    width: 100%;
-    height: 100vh;
     overflow-y: auto;
     transition: margin-left 0.3s ease;
     background-color: #f4f4f4;
-    display: flex;
-    flex-direction: row; /* Stack header and content */
-}
-
-.content.expanded {
-    margin-left: 70px; /* When sidebar is collapsed */
 }
 
 /* Header */
@@ -116,7 +108,7 @@ body {
 
 .main-content section {
     margin-top: 20px;
-    padding: 1rem;
+    padding: 20px;
     background-color: white;
     border-radius: 5px;
 }
@@ -133,22 +125,18 @@ body {
     }
 
     .content {
-        margin-left: 200px;
+        margin-left: 0px;
     }
 
     .sidebar.collapsed {
         width: 0px;
     }
 
-    .main-content.collapsed {
-        margin-left: 0;
-    }
 }
 
 @media (max-width: 600px) {
     .sidebar {
         width: 100%; /* Sidebar becomes full-width on small screens */
-        height: auto; /* Adjust height */
         position: relative;
     }
 
@@ -158,10 +146,6 @@ body {
 
     .sidebar.collapsed {
         width: 100%;
-    }
-
-    .content.expanded {
-        margin-left: 0;
     }
 }
 
