@@ -6,6 +6,45 @@ body {
     padding: 0;
 }
 
+/* Sidebar navigation */
+.sidebar {
+    background-color: #333;
+    width: 250px;
+    height: 100%; /* Full height of the page */
+    position: fixed; /* Fixes sidebar to the left */
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    color: white;
+}
+
+.sidebar h2 {
+    color: white;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #575757;
+}
+
 header {
     padding: 60px;
     text-align: center;
@@ -28,7 +67,7 @@ section {
     background-color: #f4f4f4;
 }
 
-content {
+.content {
     color: black;
     font-size: 18px;
 }
