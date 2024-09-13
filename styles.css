@@ -48,7 +48,7 @@ body {
 }
 
 .sidebar.collapsed h2, .sidebar.collapsed ul {
-    opacity: 0;
+    display: none;
 }
 
 /* Links inside the sidebar */
@@ -83,7 +83,6 @@ body {
     position: absolute;
     top: 10px;
     left: 10px;
-    z-index: 101;
 }
 
 /* Content area */
@@ -96,7 +95,7 @@ body {
     transition: margin-left 0.3s ease;
     background-color: #f4f4f4;
     display: flex;
-    flex-direction: column; /* Stack header and content */
+    flex-direction: row; /* Stack header and content */
 }
 
 .content.expanded {
