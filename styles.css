@@ -8,44 +8,40 @@ body {
     height: 100vh;
 }
 
+/* Align sidebar and content horizontally*/
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar navigation */
+.container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+}
+
 /* Sidebar navigation */
 .sidebar {
     background-color: #333;
     width: 250px;
-    height: 100%; /* Full height */
-    position: fixed;
-    top: 0;
-    left: 0;
+    height: 100%; /* Full height of the viewport */
     padding: 1rem;
     color: white;
-    transition: width 0.3s ease; /* Smooth collapse/expand */
+    transition: width 0.3s ease; /* Smooth transition for collapsing */
     overflow: hidden;
 }
 
 .sidebar.collapsed {
-    width: 70px; /* Collapsed width */
+    width: 70px; /* Shrinks sidebar on collapse */
 }
 
-.sidebar h2 {
-    color: white;
-    text-align: center;
-    opacity: 1;
+/* Hide the header text when sidebar is collapsed */
+.sidebar.collapsed h2 {
+    opacity: 0; /* Hide menu title when collapsed */
     transition: opacity 0.3s ease;
 }
 
-.sidebar.collapsed h2 {
-    opacity: 0; /* Hide text in collapsed mode */
-}
-
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    margin: 20px 0;
-}
-
+/* Adjust the links when collapsed */
 .sidebar ul li a {
     color: white;
     text-decoration: none;
@@ -55,13 +51,13 @@ body {
     transition: background-color 0.3s, padding-left 0.3s;
 }
 
-.sidebar.collapsed ul li a {
-    padding-left: 0; /* Align text left in collapsed mode */
-    text-align: center; /* Center the links */
-}
-
 .sidebar ul li a:hover {
     background-color: #575757;
+}
+
+.sidebar.collapsed ul li a {
+    padding-left: 0;
+    text-align: center; /* Center the links when collapsed */
 }
 
 /* Toggle Button */
@@ -82,16 +78,39 @@ body {
     transform: rotate(180deg); /* Rotate the button when collapsed */
 }
 
+/* Content Area */
 .content {
-    margin-left: 250px; /* Initial space for the sidebar */
+    flex-grow: 1; /* Take remaining space */
     padding: 2rem;
-    flex-grow: 1; /* Makes content expand */
     background-color: #f4f4f4;
     transition: margin-left 0.3s ease;
 }
 
+.content h1, .content h2 {
+    margin-bottom: 1rem;
+}
+
 .content.expanded {
     margin-left: 70px; /* When sidebar is collapsed */
+}
+
+/* Header */
+header {
+    padding: 60px;
+    text-align: center;
+    /*color: rgb(255, 255, 255); */
+    font-size: 30px;
+    background-image: url('Sunset.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+section {
+    margin-top: 20px;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 5px;
 }
 
 /* Responsive Design */
@@ -132,28 +151,4 @@ body {
         margin-left: 0;
     }
 }
-
-/* Header */
-header {
-    padding: 60px;
-    text-align: center;
-    /*color: rgb(255, 255, 255); */
-    font-size: 30px;
-    background-image: url('Sunset.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-section {
-    padding: 2rem;
-    background-color: #f4f4f4;
-}
-
 
