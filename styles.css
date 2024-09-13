@@ -9,7 +9,7 @@ body {
 /* Sidebar navigation */
 .sidebar {
     background-color: #333;
-    width: 250px;
+    width: 200px;
     height: 100%; /* Full height of the page */
     position: fixed; /* Fixes sidebar to the left */
     top: 0;
