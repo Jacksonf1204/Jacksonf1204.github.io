@@ -1,153 +1,92 @@
-body {
-    font-family: Arial;
+
+* {
     margin: 0;
-    background-color: rgb(197, 255, 255);
-    background-size: cover;
     padding: 0;
-    display: flex;
-    height: 100vh;
-    flex-direction: row;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Align sidebar and content horizontally*/
-.container {
-    display: flex;
-    height: 100vh;
+.user-img{
+    width: 50px;
+    border-radius: 100%;
+    border: 1px solid #eee
 }
 
-/* Sidebar navigation */
-.container {
-    display: flex;
-    height: 100vh; /* Full viewport height */
-}
-
-/* Sidebar navigation */
 .sidebar {
-    background-color: #333;
-    width: 250px; /* Initial width */
-    height: 100vh; /* Full viewport height */
-    padding: 1rem;
-    color: white;
-    transition: width 0.3s ease;
-    overflow-x: hidden;
-    position: fixed; /* Keep the sidebar fixed */
-    left: 0;
-    top: 0;
-    z-index: 100; /* Ensure it stays above content */
-}
-
-.sidebar.collapsed {
-    width: 0; /* Collapse to 0 when hidden */
-    padding: 0;
-}
-
-/* Sidebar text and elements collapse */
-.sidebar h2, .sidebar ul {
-    opacity: 1;
-    transition: opacity 0.3s ease;
-}
-
-.sidebar.collapsed h2, .sidebar.collapsed ul {
-    display: none;
-}
-
-/* Links inside the sidebar */
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    margin: 20px 0;
-}
-
-.sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    display: block;
-    transition: background-color 0.3s ease;
-}
-
-.sidebar ul li a:hover {
-    background-color: #575757;
-}
-
-/* Toggle Button */
-.toggle-btn {
-    background-color: #333;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
     position: absolute;
-    top: 10px;
-    left: 10px;
-    padding: 10px;
-    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 80px;
+    background-color: #12171e;
+    padding: 0.4rem 0.8rem;
+    transition: all 0.5s ease;
 }
 
-/* Content area */
-.main-content {
-    flex-grow: 1;
-    padding: 20px;
-    overflow-y: auto;
-    transition: margin-left 0.3s ease;
-    background-color: #f4f4f4;
+.sidebar.active ~ .main-content {
+    left: 250px;
+    width: calc(100% - 250px);
 }
 
-/* Header */
-.main-content header {
-    padding: 60px;
-    text-align: center;
-    /*color: rgb(255, 255, 255); */
-    font-size: 30px;
-    background-image: url('Sunset.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+.sidebar.active{
+    width: 250px;
 }
 
-.main-content section {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 5px;
+.sidebar #btn {
+    position: absolute;
+    color: #fff;
+    top: .4rem;
+    left: 50%;
+    font-size: 1.2rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
 }
 
-/* Collapse effect on content */
-.main-content.collapsed {
-    margin-left: 0; /* Sidebar is gone, move content to the left */
+.sidebar.active #btn {
+    left: 90%;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .sidebar {
-        width: 200px; /* Smaller sidebar on medium screens */
-    }
-
-    .content {
-        margin-left: 0px;
-    }
-
-    .sidebar.collapsed {
-        width: 0px;
-    }
-
+.sidebar .top .logo {
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
 }
 
-@media (max-width: 600px) {
-    .sidebar {
-        width: 100%; /* Sidebar becomes full-width on small screens */
-        position: relative;
-    }
-
-    .content {
-        margin-left: 0;
-    }
-
-    .sidebar.collapsed {
-        width: 100%;
-    }
+.sidebar.active .top .logo {
+    opacity: 1;
 }
 
+.top .logo i {
+    font-size: 2rem;
+    margin-right: 5px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.user p {
+    color: #fff;
+    opacity: 1;
+    margin-left: 1rem;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.sidebar p {
+    opacity: 0;
+}
+
+
+.sidebar.active p {
+    opacity: 1;
+}
