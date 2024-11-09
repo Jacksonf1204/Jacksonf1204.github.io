@@ -122,11 +122,11 @@
 }
 
 .sidebar .nav-item {
-    opacity: 0;
+    display: none;
 }
 
 .sidebar.active .nav-item {
-    opacity: 1;
+    display: inline-block;
 }
 
 .sidebar ul li .tooltip {
@@ -140,9 +140,11 @@
     line-height: 1.8rem;
     z-index: 20;
     opacity: 0;
+    display: none;
 }
 
 .sidebar ul li:hover .tooltip {
+    display: inline;
     opacity: 1;
 }
 
@@ -159,4 +161,9 @@
     transition: all 0.5s ease;
     width: calc(100% - 80px);
     padding: 1rem;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
 }
