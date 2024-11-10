@@ -1,87 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jackson Fuller Portfolio</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="sidebar">
-        <div class="top">
-            <div class="logo">
-                <i class="bx bxl-codepen"></i>
-                <span>Portfolio</span>
-            </div>
-            <i class="bx bx-menu" id="btn"></i>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jackson Fuller's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="" alt="sunset" />
+          </a>
         </div>
-        <div class="user">
-            <img src="Sunset.jpg" alt="sunset" class="user-img">
-            <div>
-                <p class="bold">Jackson F.</p>
-                <p>Creator</p>
-            </div>
+        <div class="main-menu">
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="#">About Me</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-code"></i>Projects</a>
+            </li>
+            <li>
+              <a href="#"> <i class="fa-solid fa-burger"></i>Recipes </a>
+            </li>
+            <li>
+              <a class="btn" href="#">
+                <i class="fa-solid fa-user"></i> Log in
+              </a>
+            </li>
+          </ul>
         </div>
-        <ul>
-            <li>
-                <a href="index.html">
-                    <i class="bx bxs-grid-alt"></i>
-                    <span class="nav-item">Home</span>
-                </a>
-                <span class="tooltip">Home</span>
-            </li>
-            <li>
-                <a href="projects.html">
-                    <i class="bx bx-code"></i>
-                    <span class="nav-item">Projects</span>
-                </a>
-                <span class="tooltip">Projects</span>
-            </li>
-            <li>
-                <a href="recipes.html">
-                    <i class="bx bxs-bowl-hot"></i>
-                    <span class="nav-item">Recipes</span>
-                </a>
-                <span class="tooltip">Recipes</span>
-            </li>
-            <li>
-                <a href="aboutme.html">
-                    <i class="bx bxs-analyse"></i>
-                    <span class="nav-item">About Me</span>
-                </a>
-                <span class="tooltip">About Me</span>
-            </li>
-        </ul>
-    </div>
-
-    <div class="main-content">
-        <div class="container">
-            <h1>Portfolio</h1>
-        </div>
-    </div>
+      </div>
+    </nav>
+    <!--Hero-->
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-reading text-xxl">
-                    Jackson Fuller's comprehensive website.
-                </h1>
-                <p class="hero-text">
-                    View projects, recipes, and more.
-                </p>
-            </div>
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-heading text-xxl">
+            Hello <i class="fa-regular fa-hand"></i>, I'm Jackson Fuller
+          </h1>
+          <p class="hero-text">
+            Recent College Graduate with a variety of experiences.
+          </p>
+          <div class="hero-buttons">
+            <a href="#" class="btn btn-primary">Get Started</a>
+            <a href="#" class="btn">Connect with Me!</a>
+          </div>
         </div>
+      </div>
     </section>
-</body>
+    <!-- Skill Tree Section -->
+    <section class="skilltree bg-black">
+      <div class="container-sm">
+        <h2 class="skilltree-heading text-xl text-center">Skill Tree</h2>
+        <div class="skilltree-content">
+          <a href="#">
+            <img src="../images/sunset.jpg" alt="" />
+          </a>
 
-<script>
-    let btn = document.querySelector('#btn')
-    let sidebar = document.querySelector('.sidebar')
+          <a href="#" class="btn btn-primary">Get Started</a>
+        </div>
+      </div>
+    </section>
+    <!-- Featured Projects -->
+    <section class="projects bg-dark">
+      <div class="container">
+        <h3 class="projects-heading text-xl text-center">Featured Projects</h3>
+        <div class="projects-grid">
+          <div class="card">
+            <p>Test paragraph</p>
+            <p>Jackson</p>
+            <p>Another Name</p>
+          </div>
+          <div class="card">
+            <p>Test paragraph2</p>
+            <p>Jackson</p>
+            <p>Another Name</p>
+          </div>
+          <div class="card">
+            <p>Test paragraph3</p>
+            <p>Jackson</p>
+            <p>Another Name</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Certificates -->
+    <section class="certificates">
+      <!-- Card 1 -->
+      <div class="card bg-light">
+        <div class="certificates-card-header">
+          <h4 class="certificates-heading text-xl">Simple</h4>
+          <h4 class="certificates-heading text-xl">Simple</h4>
+        </div>
+      </div>
+    </section>
 
-    btn.onclick = function () {
-        sidebar.classList.toggle('active')
-    };
-</script>
-
+    <script src="js/main.js"></script>
+  </body>
 </html>
