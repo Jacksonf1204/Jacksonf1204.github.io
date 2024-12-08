@@ -91,13 +91,13 @@ img {
   padding: 10px 0 40px;
 }
 
-.skilltree-content {
+.skilltree .skilltree-content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.skilltree-preview {
+.skilltree .skilltree-preview {
   margin-bottom: 20px;
 }
 
@@ -111,7 +111,7 @@ img {
   margin-bottom: 40px;
 }
 
-.projects-grid {
+.projects .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
@@ -121,6 +121,20 @@ img {
   margin-top: 30px;
   font-weight: bold;
 }
+
+/* Certificates */
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.certificates .certificates-card-subheading {
+  margin-bottom: 30px;
+}
+
+.certificates .certificates-car
 
 /* Utility Classes */
 .container {
@@ -135,6 +149,15 @@ img {
   padding: 0 15px;
 }
 
+/* Card */
+.card {
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Buttons */
 .btn {
   display: inline-block;
   padding: 13px 20px;
@@ -222,12 +245,4 @@ img {
 .bg-black {
   background: #000;
   color: #fff;
-}
-
-/* Card */
-.card {
-  background: #fff;
-  color: #000;
-  border-radius: 10px;
-  padding: 20px;
 }
